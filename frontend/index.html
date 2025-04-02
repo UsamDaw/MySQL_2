@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotek Administrasjon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bibliotek Administrasjonssystem</h1>
+
+    <!-- Legg til ny bok -->
+    <section>
+        <h2>Legg til ny bok</h2>
+        <form id="add-book-form">
+            <input type="text" id="title" placeholder="Tittel" required>
+            <input type="text" id="author" placeholder="Forfatter" required>
+            <input type="text" id="genre" placeholder="Sjanger" required>
+            <button type="submit">Legg til bok</button>
+        </form>
+    </section>
+
+    <!-- Liste over bøker -->
+    <section>
+        <h2>Bøker i biblioteket</h2>
+        <ul id="books-list"></ul>
+    </section>
+
+    <!-- Rediger bok modal -->
+    <div id="edit-book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Rediger bok</h2>
+            <form id="edit-book-form">
+                <input type="hidden" id="edit-book-id">
+                <input type="text" id="edit-title" placeholder="Tittel" required>
+                <input type="text" id="edit-author" placeholder="Forfatter" required>
+                <input type="text" id="edit-genre" placeholder="Sjanger" required>
+                <select id="edit-status">
+                    <option value="Tilgjengelig">Tilgjengelig</option>
+                    <option value="Utlånt">Utlånt</option>
+                </select>
+                <button type="submit">Oppdater bok</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
